@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Frog
+  - Floor
   layers:
   - Default
   - TransparentFX
