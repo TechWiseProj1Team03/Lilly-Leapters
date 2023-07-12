@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 1793366526}
   - component: {fileID: 1793366528}
   - component: {fileID: 1793366529}
-  - component: {fileID: 1793366530}
+  - component: {fileID: 1793366531}
   m_Layer: 0
   m_Name: Frog
   m_TagString: Frog
@@ -736,7 +736,7 @@ PolygonCollider2D:
       - {x: 0.29296875, y: 0.90234375}
       - {x: 0.15234375, y: 0.97265625}
   m_UseDelaunayMesh: 0
---- !u!114 &1793366530
+--- !u!114 &1793366531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -745,13 +745,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1793366524}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec940da123397b64cb90108bd2b941ff, type: 3}
+  m_Script: {fileID: 11500000, guid: e67babf935b224996ab1720a3920fc31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 1793366528}
-  groundLayer:
+  speed: 2
+  jumpForce: 5
+  isGrounded: 1
+  whatIsGround:
     serializedVersion: 2
     m_Bits: 64
+  groundCheck: {fileID: 2027558701}
+  checkRadius: 0.2
 --- !u!1 &1934320898
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +907,7 @@ GameObject:
   - component: {fileID: 2027558702}
   m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

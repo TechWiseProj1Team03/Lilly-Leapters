@@ -19,7 +19,7 @@ public class FrogMovement : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
     }
-
+    
     void Update()
     {
         MoveHorizontal();
