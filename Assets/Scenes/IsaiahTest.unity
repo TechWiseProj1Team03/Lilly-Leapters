@@ -233,7 +233,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5921569, g: 0.5921569, b: 0.59607846, a: 1}
+  m_Color: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -817,7 +817,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 2}
+    oldSize: {x: 2.88, y: 0.48}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -916,7 +916,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc05c2ec0ee0f6943a69e75f08f56202, type: 3}
   m_Color: {r: 0.016378773, g: 0.7169812, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1018,7 +1018,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.88, y: 0.48}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1028,10 +1028,11 @@ PolygonCollider2D:
     m_Paths:
     - - {x: -0.07, y: 0.03}
       - {x: -0.099999994, y: 0.02}
-      - {x: -0.14884871, y: -0.093582295}
-      - {x: -0.12791356, y: -0.26700205}
-      - {x: 0.14489198, y: -0.26700205}
-      - {x: 0.1565226, y: -0.09125619}
+      - {x: -0.097984776, y: -0.09820628}
+      - {x: -0.09092159, y: -0.18839425}
+      - {x: 0.0039136894, y: -0.16527432}
+      - {x: 0.09402809, y: -0.18377027}
+      - {x: 0.11490668, y: -0.09125619}
       - {x: 0.11, y: 0.02}
       - {x: 0.089999996, y: 0.03}
   m_UseDelaunayMesh: 0
@@ -1103,7 +1104,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1440099005, guid: 94a50cbc6ca49ab49aaf110626df1670, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc05c2ec0ee0f6943a69e75f08f56202, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
