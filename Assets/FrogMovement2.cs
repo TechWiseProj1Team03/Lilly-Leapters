@@ -41,9 +41,6 @@ public class FrogMovement2 : MonoBehaviour
     {
         float h = 0;
 
-        //  Determine the speed of the frog, if it's above 0.01 we play the movement animation
-        animator.SetFloat("isMoving", Mathf.Abs(h));
-
         if (Input.GetKey(KeyCode.A))
         {
             h = -1;
@@ -56,6 +53,9 @@ public class FrogMovement2 : MonoBehaviour
         Vector2 position = transform.position;
         position.x += speed * h * Time.deltaTime;
         transform.position = position;
+
+        //  Determine the speed of the frog, if it's above 0.01 we play the movement animation
+        animator.SetFloat("isMoving", Mathf.Abs(h));
     }
 
     void Jump()
