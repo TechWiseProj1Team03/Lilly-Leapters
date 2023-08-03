@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FrogMovement2 : MonoBehaviour
 {
+
+    //  Reference to animator component on the frog
+    public Animator animator;
     private Rigidbody2D rb2D;
 
     public float speed = 2f;
@@ -22,6 +25,9 @@ public class FrogMovement2 : MonoBehaviour
     void Update()
     {
         MoveHorizontal();
+
+        //  Stop jump animation once frog is grounded again
+        animator.SetBool("isJumping", false);
         
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         Debug.Log(isGrounded);
@@ -34,6 +40,10 @@ public class FrogMovement2 : MonoBehaviour
     void MoveHorizontal()
     {
         float h = 0;
+
+        //  Determine the speed of the frog, if it's above 0.01 we play the movement animation
+        animator.SetFloat("isMoving", Mathf.Abs(h));
+
         if (Input.GetKey(KeyCode.A))
         {
             h = -1;
@@ -50,6 +60,8 @@ public class FrogMovement2 : MonoBehaviour
 
     void Jump()
     {
+        //  Frog is jumping so play jump animation 
+        animator.SetBool("isJumping", true);
         rb2D.velocity = Vector2.up * jumpForce;
     }
 }
