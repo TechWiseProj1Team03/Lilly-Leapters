@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0.392}
+  m_Color: {r: 0.04251856, g: 0, b: 0.6415094, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 7662864845304495646}
   - component: {fileID: 990687144865120245}
   - component: {fileID: 662736188271415625}
-  - component: {fileID: 4233004926969223964}
+  - component: {fileID: 5337077190187781111}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -281,7 +281,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
     m_HighlightedColor: {r: 0.92455333, g: 1, b: 0.4198113, a: 1}
     m_PressedColor: {r: 0.31872627, g: 1, b: 0.051886797, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -300,7 +300,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 4233004926969223964}
+  m_TargetGraphic: {fileID: 5337077190187781111}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -316,7 +316,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4233004926969223964
+--- !u!114 &5337077190187781111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

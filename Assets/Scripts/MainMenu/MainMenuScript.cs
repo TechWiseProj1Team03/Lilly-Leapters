@@ -9,6 +9,9 @@ public class MainMenuScript : MonoBehaviour
     //  Public reference to our LevelSelectionContainer in scene 
     public GameObject levelSelectionContainer; 
 
+    //  Public reference to our settings container in scene 
+    public GameObject settingsContainer; 
+
     //  Activated when play button is pressed
     public void OnPlay()
     {
@@ -17,6 +20,33 @@ public class MainMenuScript : MonoBehaviour
 
         //  Render our level selection 
         levelSelectionContainer.SetActive(true);
+    }
+
+    //  When player presses settings button we show them the settings page and hide the main menu
+    public void OnSettings() 
+    {
+        //  Hide our button container 
+        buttonContainer.SetActive(false); 
+
+        //  Show our settings Container 
+        settingsContainer.SetActive(true); 
+    }
+
+    //  Depending on where player is, when they press the back button we take them to the main menu screen and hide the one they're currently on 
+    public void OnBack()
+    {   
+        //  If they're in the settings page we hide that page and show the main menu
+        if (settingsContainer.activeSelf) 
+        {
+            settingsContainer.SetActive(false);
+            buttonContainer.SetActive(true); 
+        }
+        //  Else if they're on the level selection then we hide that and take them to the main menu
+        else if (levelSelectionContainer.activeSelf)
+        {
+            levelSelectionContainer.SetActive(false);
+            buttonContainer.SetActive(true);
+        }
     }
 
     //  Runs when player presses quit button on main menu 
