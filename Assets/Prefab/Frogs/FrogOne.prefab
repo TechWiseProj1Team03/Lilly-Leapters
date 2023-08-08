@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4499025093141786671}
   - component: {fileID: 1872266602053038846}
   - component: {fileID: 78771946895408285}
+  - component: {fileID: 325445247393697355}
   m_Layer: 0
   m_Name: FrogOne
   m_TagString: Frog
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2459938569657774755
 SpriteRenderer:
@@ -211,3 +212,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &325445247393697355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137433772872019141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34fcf694b1bb4fca86f55e7ea5da364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tongueLength: 3
+  interactionDistance: 2
+  interactableLayers:
+    serializedVersion: 2
+    m_Bits: 0
