@@ -1045,6 +1045,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNames:
   - Level1
+  - Level2
+  - Level3
 --- !u!1 &482491093
 GameObject:
   m_ObjectHideFlags: 0
