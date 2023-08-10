@@ -35,7 +35,7 @@ public class FrogMovement : MonoBehaviour
         
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         Debug.Log(isGrounded);
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }
