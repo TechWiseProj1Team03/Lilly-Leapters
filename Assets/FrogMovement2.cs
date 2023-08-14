@@ -17,8 +17,11 @@ public class FrogMovement2 : MonoBehaviour
     
     public bool isGrounded;
     public LayerMask whatIsGround;
-    public Transform groundCheck; 
-    public float checkRadius = 0.2f; 
+    public float raycastDistance = 0.02f;
+
+    // Added variables for multiple jumps
+    private int jumpCount = 0;
+    private int maxJumps = 1;
 
     void Awake()
     {
@@ -31,12 +34,20 @@ public class FrogMovement2 : MonoBehaviour
 
         //  Stop jump animation once frog is grounded again
         animator.SetBool("isJumping", false);
-        
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        Vector2 raycastOrigin = new Vector2(transform.position.x, transform.position.y + 0.02f);
+        isGrounded = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance, whatIsGround);
+        Debug.DrawRay(transform.position, Vector2.down * raycastDistance, Color.black);  // Optional visualization
+
         Debug.Log(isGrounded);
-        if (isGrounded && Input.GetKeyDown(KeyCode.W))
+        if (isGrounded)
+        {
+            jumpCount = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) && jumpCount < maxJumps)
         {
             Jump();
+            jumpCount++;
         }
     }
 
@@ -79,11 +90,17 @@ public class FrogMovement2 : MonoBehaviour
         //  Frog is jumping so play jump animation 
         animator.SetBool("isJumping", true);
         rb2D.velocity = Vector2.up * jumpForce;
+        Debug.Log("Jumping!");
     }
 
     //  Changes frog's direction to the opposite that it's currently facing 
     void flip() 
     {
         transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+    }
+
+    public void ActivateFlyPowerUp()
+    {
+        maxJumps = 2;
     }
 }
