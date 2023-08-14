@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FrogMovement : MonoBehaviour
+public class FrogMovement : MonoBehaviour, IFrogMovement 
 {
     //  Reference to animator component on the frog
     public Animator animator;
     private Rigidbody2D rb2D;
 
     public float speed = 2f;
-    public float jumpForce = 5f;
+    public float jumpForce = 10f;
 
     //  Determines which direction the sprite is facing 
     public bool isFacingLeft = false; 

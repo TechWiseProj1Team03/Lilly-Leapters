@@ -1723,10 +1723,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrogOne
       objectReference: {fileID: 0}
+    - target: {fileID: 325445247393697355, guid: 997067916984ce743987c7ff58be17aa, type: 3}
+      propertyPath: frogMovement
+      value: 
+      objectReference: {fileID: 458109511}
+    - target: {fileID: 325445247393697355, guid: 997067916984ce743987c7ff58be17aa, type: 3}
+      propertyPath: interactableLayers.m_Bits
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872266602053038846, guid: 997067916984ce743987c7ff58be17aa, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1872266602053038846, guid: 997067916984ce743987c7ff58be17aa, type: 3}
       propertyPath: groundCheck
       value: 
       objectReference: {fileID: 376628255}
+    - target: {fileID: 1872266602053038846, guid: 997067916984ce743987c7ff58be17aa, type: 3}
+      propertyPath: raycastDistance
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4845966327049388330, guid: 997067916984ce743987c7ff58be17aa, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1781,6 +1797,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 137433772872019141, guid: 997067916984ce743987c7ff58be17aa, type: 3}
   m_PrefabInstance: {fileID: 458109507}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &458109511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1872266602053038846, guid: 997067916984ce743987c7ff58be17aa, type: 3}
+  m_PrefabInstance: {fileID: 458109507}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458109508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67babf935b224996ab1720a3920fc31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &567987215
 GameObject:
   m_ObjectHideFlags: 0
@@ -5853,7 +5880,8 @@ MonoBehaviour:
   interactionDistance: 2
   interactableLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
+  frogMovement: {fileID: 946289340}
 --- !u!120 &946289338
 LineRenderer:
   serializedVersion: 2
@@ -5958,6 +5986,17 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &946289340 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4579918625859341016, guid: d9182709e2bd2c44e852f6f56f684eda, type: 3}
+  m_PrefabInstance: {fileID: 6282123207789656090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946289324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fdf51dc6460c45fd9f5d32d450103d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1184375177
 GameObject:
   m_ObjectHideFlags: 0
@@ -10310,7 +10349,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1620553611}
   - component: {fileID: 1620553610}
-  m_Layer: 0
+  - component: {fileID: 1620553612}
+  - component: {fileID: 1620553613}
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10377,13 +10418,60 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620553609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.46, y: -8.44, z: 0}
+  m_LocalPosition: {x: -11.16, y: -8.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1620553612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620553609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee6234164bcb47f4bdae4dcf822aab0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1620553613
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620553609}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0039147735, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5039148
 --- !u!1001 &1680654030
 PrefabInstance:
   m_ObjectHideFlags: 0
