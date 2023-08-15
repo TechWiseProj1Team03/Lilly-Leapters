@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FrogMovement : MonoBehaviour, IFrogMovement 
+public class FrogMovement : MonoBehaviour
 {
     //  Reference to animator component on the frog
     public Animator animator;
@@ -12,7 +12,7 @@ public class FrogMovement : MonoBehaviour, IFrogMovement
     public List<AudioClip> sounds;
 
     public float speed = 2f;
-    public float jumpForce = 10f;
+    public float jumpForce = 5f;
 
     //  Determines which direction the sprite is facing 
     public bool isFacingLeft = false; 
