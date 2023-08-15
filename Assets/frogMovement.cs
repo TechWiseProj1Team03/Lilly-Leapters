@@ -19,12 +19,17 @@ public class FrogMovement : MonoBehaviour
     
     public bool isGrounded;
     public LayerMask whatIsGround;
-    public Transform groundCheck; 
-    public float checkRadius = 0.2f; 
+    public float raycastDistance = 0.02f; 
+
+    private int jumpCount = 0;
+    private int maxJumps = 1;  // Single jump by default
+
+
 
     void Awake()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        
     }
     
     void Update()
@@ -33,11 +38,23 @@ public class FrogMovement : MonoBehaviour
         //  Stop jump animation once frog is grounded again
         animator.SetBool("isJumping", false);
         
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        Vector2 raycastOrigin = new Vector2(transform.position.x, transform.position.y + 0.02f);
+        isGrounded = Physics2D.Raycast(raycastOrigin, Vector2.down, raycastDistance, whatIsGround);
+
+        Debug.DrawRay(transform.position, Vector2.down * raycastDistance, Color.black);  // Optional visualization
+        
+
         Debug.Log(isGrounded);
-        if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
+        if (isGrounded)
+        {
+            jumpCount = 0;  // Reset jump count when grounded
+        }
+        
+        // Check for jump key press and ensure jump count is below max allowed jumps
+        if (Input.GetKeyDown(KeyCode.UpArrow) && jumpCount < maxJumps)
         {
             Jump();
+            jumpCount++;  // Increment jump count
         }
     }
 
@@ -81,5 +98,9 @@ public class FrogMovement : MonoBehaviour
     {
         transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
         AudioMgr.instance.PlaySound(sounds[0]);
+    }
+    public void ActivateFlyPowerUp()
+    {
+        maxJumps = 2;  // Allow double jump
     }
 }
