@@ -8,7 +8,7 @@ public class TongueMovement_1 : MonoBehaviour
     public float interactionDistance = 2f;  // Distance within which tongue can interact with objects
     public LayerMask interactableLayers;  // Layers that tongue can interact with
     private Animator tongueAnimator;  // Reference to the Animator component
-
+    public FrogMovement frogMovement;
     private Vector2 tongueEnd;  // Calculated end point of the tongue
 
     void Start()
@@ -45,7 +45,12 @@ public class TongueMovement_1 : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, interactionDistance, interactableLayers);  // Cast a ray to check for interactions
         if (hit.collider != null)  // Check if ray hit any collider
         {
-            Interactable interactable = hit.collider.GetComponent<Interactable>();  // Fetch the Interactable component of hit object
+            Interactable interactable = hit.collider.GetComponent<Interactable>();
+            if (interactable is FlyPowerUp) // Check if interactable object is FlyPowerUp
+            {
+                ((FlyPowerUp)interactable).frog = this.frogMovement; // Now using the interface
+            }
+
             if (interactable != null)  // Ensure hit object has an Interactable component
             {
                 interactable.Interact();  // Trigger interaction
