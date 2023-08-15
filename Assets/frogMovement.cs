@@ -8,6 +8,9 @@ public class FrogMovement : MonoBehaviour, IFrogMovement
     public Animator animator;
     private Rigidbody2D rb2D;
 
+    //  List of sounds that the frog can make 
+    public List<AudioClip> sounds;
+
     public float speed = 2f;
     public float jumpForce = 10f;
 
@@ -85,12 +88,16 @@ public class FrogMovement : MonoBehaviour, IFrogMovement
         //  Frog is jumping so play jump animation 
         animator.SetBool("isJumping", true);
         rb2D.velocity = Vector2.up * jumpForce;
+
+        //  Quick and dirty, will make more dynamic later
+        AudioMgr.instance.PlaySound(sounds[1]);
     }
 
     //  Changes frog's direction to the opposite that it's currently facing 
     void flip() 
     {
         transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+        AudioMgr.instance.PlaySound(sounds[0]);
     }
     public void ActivateFlyPowerUp()
     {

@@ -7,7 +7,7 @@ public class AudioMgr : MonoBehaviour
     public static AudioMgr instance; 
 
      //  Reference to the menu slider 
-    [SerializeField] private Slider _slider;
+    [SerializeField] private Slider _slider = null;
 
     //  Enables Unity editior to show variable even though it's private 
     [SerializeField] 

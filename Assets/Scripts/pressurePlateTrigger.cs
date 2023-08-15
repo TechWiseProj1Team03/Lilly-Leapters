@@ -16,7 +16,7 @@ public class pressurePlateTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Frog"))
         {
-            GetComponent<SpriteRenderer>().color = Color.blue;
+            GetComponent<SpriteRenderer>().color = Color.green;
             Vector3 newPosition = initialPosition + new Vector3(0f, 2f, 0f);
             doorTransform.position = newPosition;
 
@@ -27,7 +27,7 @@ public class pressurePlateTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Frog"))
         {
-            GetComponent<SpriteRenderer>().color = Color.gray;
+            GetComponent<SpriteRenderer>().color = Color.white;
             doorTransform.position = initialPosition;
         }
     }
