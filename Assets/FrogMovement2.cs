@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FrogMovement2 : MonoBehaviour
+public class FrogMovement2 : MonoBehaviour, IFrogMovement 
 {
 
     //  Reference to animator component on the frog
