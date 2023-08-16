@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4607039168944130164}
   - component: {fileID: 7875141624629385902}
+  - component: {fileID: 4538843626267008521}
   m_Layer: 0
   m_Name: GameMgr
   m_TagString: Untagged
@@ -44,5 +45,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acef175c2c9268545871505bf2016dac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frogOne: {fileID: 0}
+  frogTwo: {fileID: 0}
   timeSeconds: 120
   time: {fileID: 0}
+--- !u!114 &4538843626267008521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9030249012015578450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be6bc53f424cca4bb0932166991b16a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnZonePlayerOne: {fileID: 0}
+  respawnZonePlayerTwo: {fileID: 0}
