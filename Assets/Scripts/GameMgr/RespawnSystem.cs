@@ -1,26 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RespawnSystem : MonoBehaviour
 {
-    [Tooltip("Add colliders from scene here that you wish to have kill the frog and respawn it.")]
-    public List<Collider2D> deathZones; 
+    [Tooltip("Empty gameobject added here is where player one will spawn")]
+    public Transform respawnZonePlayerOne; 
 
-     [Tooltip("Empty gameobject added here is where frogs will spawn")]
-    public GameObject respawnZone; 
+    [Tooltip("Empty gameobject added here is where player two will spawn")]
+    public Transform respawnZonePlayerTwo; 
 
-    // Update is called once per frame
-    void Update()
+    //  This function is called from our collision detection script which enables us to have multiple zones where the frogs may need to respawn when touched
+    public void Respawn(Collider2D otherObj)
     {
-        
-    }
-
-    void OnCollisionEnter2D(Collision otherObj)
-    {
-        if (otherObj.gameObject.tag == "PlayerOne" || otherObj.gameObject.tag == "PlayerTwo")
+        if (otherObj.tag == "FrogOne" )
         {
-            // Destroy(GameMgr.instance)
+            //  Set the frog position to our respawn position
+            GameMgr.instance.frogOne.transform.position = respawnZonePlayerOne.position; 
+        }
+        else if (otherObj.tag == "FrogTwo" )
+        {
+            //  Set the frog position to our respawn position
+            GameMgr.instance.frogTwo.transform.position = respawnZonePlayerTwo.position; 
         }
     }
 }
