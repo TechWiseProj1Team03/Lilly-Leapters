@@ -1,5 +1,5 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI; 
 
 public class GameMgr : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class GameMgr : MonoBehaviour
     public float timeSeconds; 
 
     [Tooltip("Reference to our UI text in game, link UI prefab to this.")]
-    public Text time; 
+    public TMP_Text time; 
 
     //  Class variables for our different units of time 
     private float minutes;  
@@ -51,7 +51,7 @@ public class GameMgr : MonoBehaviour
         timeSeconds += 1; 
         minutes = Mathf.FloorToInt(timeSeconds / 60);
         seconds = Mathf.FloorToInt(timeSeconds % 60); 
-        miliseconds = timeSeconds / 1000;
-        time.text = string.Format("{0:00}:{1:00}:{3:000}", minutes, seconds, miliseconds);
+        miliseconds = (timeSeconds % 1) * 1000; 
+        time.SetText(string.Format("{0:00}:{1:00}:{2:000}", minutes, seconds, miliseconds));
     }
 }
