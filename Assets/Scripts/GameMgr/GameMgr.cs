@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 //  This class is a singleton and is used to manage game state which includes managing players, game time, etc. For our game this will manage the players, 
 //  managing loading certain scenes such as the next level, as well as the death and respawn system of players
@@ -51,7 +52,8 @@ public class GameMgr : MonoBehaviour
         }
         else
         {
-            Debug.Log("time is out");
+            AudioMgr.instance.StopSound();
+            SceneManager.LoadScene("DeathScreen");
         }
     }
 
