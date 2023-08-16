@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 325445247393697355}
   m_Layer: 0
   m_Name: FrogOne
-  m_TagString: Frog
+  m_TagString: FrogOne
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2459938569657774755
 SpriteRenderer:
@@ -183,14 +183,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 78771946895408285}
+  sounds: []
   speed: 2
   jumpForce: 5
-  isGrounded: 1
+  isFacingLeft: 0
+  isGrounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  groundCheck: {fileID: 0}
-  checkRadius: 0.2
+  raycastDistance: 0.02
 --- !u!95 &78771946895408285
 Animator:
   serializedVersion: 5
@@ -229,3 +230,4 @@ MonoBehaviour:
   interactableLayers:
     serializedVersion: 2
     m_Bits: 0
+  frogMovement: {fileID: 0}

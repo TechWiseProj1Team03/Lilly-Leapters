@@ -1145,10 +1145,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4579918625859341016, guid: d9182709e2bd2c44e852f6f56f684eda, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 319836049}
     - target: {fileID: 8187681149724533457, guid: d9182709e2bd2c44e852f6f56f684eda, type: 3}
       propertyPath: m_Name
       value: 'FrogTwo '
@@ -1399,10 +1395,6 @@ PrefabInstance:
       propertyPath: time
       value: 
       objectReference: {fileID: 60804560}
-    - target: {fileID: 7875141624629385902, guid: e1478952f9926834cb293c0f267c0e9b, type: 3}
-      propertyPath: timeSeconds
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 9030249012015578450, guid: e1478952f9926834cb293c0f267c0e9b, type: 3}
       propertyPath: m_Name
       value: GameMgr
@@ -1725,18 +1717,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrogOne
       objectReference: {fileID: 0}
-    - target: {fileID: 1872266602053038846, guid: 997067916984ce743987c7ff58be17aa, type: 3}
-      propertyPath: jumpForce
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1872266602053038846, guid: 997067916984ce743987c7ff58be17aa, type: 3}
-      propertyPath: isGrounded
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1872266602053038846, guid: 997067916984ce743987c7ff58be17aa, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 319836049}
     - target: {fileID: 4845966327049388330, guid: 997067916984ce743987c7ff58be17aa, type: 3}
       propertyPath: m_RootOrder
       value: 3
