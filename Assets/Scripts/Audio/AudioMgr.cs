@@ -55,4 +55,10 @@ public class AudioMgr : MonoBehaviour
         AudioListener.volume = volume;
     }
 
+    //  Used to stop our singleton from persisting sounds between scene changes
+    public void StopSound()
+    {
+        _soundEffect.Stop();
+        _music.Stop();
+    }
 }

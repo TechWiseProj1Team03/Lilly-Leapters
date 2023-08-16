@@ -11,6 +11,7 @@ public class LevelMgr : MonoBehaviour
     public void OnLevelSelected(int levelNumber)
     {
         SceneManager.LoadScene(sceneNames[levelNumber]);
+        AudioMgr.instance.StopSound();
     } 
     
 }
