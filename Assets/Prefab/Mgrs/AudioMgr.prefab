@@ -266,6 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8660839252027806773}
   - component: {fileID: 5502531605748669928}
+  - component: {fileID: 2684025101461745496}
   m_Layer: 0
   m_Name: AudioMgr
   m_TagString: Untagged
@@ -305,3 +306,11 @@ MonoBehaviour:
   _slider: {fileID: 0}
   _soundEffect: {fileID: 3667438362230909315}
   _music: {fileID: 9215441839370694270}
+--- !u!81 &2684025101461745496
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5278136000011477974}
+  m_Enabled: 1

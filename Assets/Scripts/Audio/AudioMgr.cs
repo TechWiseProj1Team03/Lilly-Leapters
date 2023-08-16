@@ -37,7 +37,10 @@ public class AudioMgr : MonoBehaviour
     void Start()
     {
         //  We need to add a listener to update when any changes occur so we can adjust the volume
-        _slider.onValueChanged.AddListener(value => ChangeMasterVolume(value)); 
+        if (_slider != null) 
+        {
+             _slider.onValueChanged.AddListener(value => ChangeMasterVolume(value)); 
+        }
     }
 
     public void PlaySound(AudioClip soundEffect)

@@ -1975,19 +1975,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8676806574223620728, guid: 675f5052d578a5d45a2d83a3078d6495, type: 3}
   m_PrefabInstance: {fileID: 704956993}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &821037080 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5278136000011477974, guid: 2f50e4c1615819141abe87cb0581f4a8, type: 3}
-  m_PrefabInstance: {fileID: 3480060546832751285}
-  m_PrefabAsset: {fileID: 0}
---- !u!81 &821037081
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821037080}
-  m_Enabled: 1
 --- !u!1 &828354406
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,10 +5109,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5278136000011477974, guid: 2f50e4c1615819141abe87cb0581f4a8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 821037081}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f50e4c1615819141abe87cb0581f4a8, type: 3}
 --- !u!224 &8676806575711077070 stripped
 RectTransform:
