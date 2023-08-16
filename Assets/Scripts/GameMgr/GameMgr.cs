@@ -54,6 +54,7 @@ public class GameMgr : MonoBehaviour
         {
             AudioMgr.instance.StopSound();
             SceneManager.LoadScene("DeathScreen");
+            Destroy(gameObject);
         }
     }
 
