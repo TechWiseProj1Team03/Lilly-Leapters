@@ -5854,6 +5854,7 @@ MonoBehaviour:
   interactableLayers:
     serializedVersion: 2
     m_Bits: 0
+  frogMovement: {fileID: 0}
 --- !u!1 &1184375177
 GameObject:
   m_ObjectHideFlags: 0
@@ -10348,7 +10349,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Main Camera '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8269910152218206556, guid: 445d5e03517d4ed47903121552c2265e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
