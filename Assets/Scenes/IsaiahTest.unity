@@ -1356,6 +1356,10 @@ PrefabInstance:
       propertyPath: respawnZonePlayerOne
       value: 
       objectReference: {fileID: 1757024436}
+    - target: {fileID: 4538843626267008521, guid: e1478952f9926834cb293c0f267c0e9b, type: 3}
+      propertyPath: secondsToRemoveDueToDeath
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4607039168944130164, guid: e1478952f9926834cb293c0f267c0e9b, type: 3}
       propertyPath: m_RootOrder
       value: 10
