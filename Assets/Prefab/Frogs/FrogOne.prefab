@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2459938569657774755
 SpriteRenderer:
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 531294876, guid: 270cdaa5a8851b045bffcf4f3f394543, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -183,7 +183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 78771946895408285}
-  sounds: []
+  sounds:
+  - {fileID: 8300000, guid: e8d030e13015c8946bb836ff2d5de575, type: 3}
+  - {fileID: 8300000, guid: 0b6599b48b22fc7458cee8fb0700d212, type: 3}
+  - {fileID: 8300000, guid: 8c5fda05a2c33864cb5a8fba572b3675, type: 3}
   speed: 2
   jumpForce: 5
   isFacingLeft: 0
@@ -230,4 +233,6 @@ MonoBehaviour:
   interactableLayers:
     serializedVersion: 2
     m_Bits: 0
+  tongueAnimator: {fileID: 78771946895408285}
   frogMovement: {fileID: 0}
+  toungueSound: {fileID: 8300000, guid: 8c5fda05a2c33864cb5a8fba572b3675, type: 3}

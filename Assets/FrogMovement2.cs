@@ -12,6 +12,9 @@ public class FrogMovement2 : MonoBehaviour, IFrogMovement
     public float speed = 2f;
     public float jumpForce = 5f;
 
+    //  List of sounds that the frog can make 
+    public List<AudioClip> sounds;
+
     //  Determines which direction the sprite is facing 
     public bool isFacingLeft = false; 
     
@@ -91,12 +94,16 @@ public class FrogMovement2 : MonoBehaviour, IFrogMovement
         animator.SetBool("isJumping", true);
         rb2D.velocity = Vector2.up * jumpForce;
         Debug.Log("Jumping!");
+
+        //  Quick and dirty, will make more dynamic later
+        AudioMgr.instance.PlaySound(sounds[1]);
     }
 
     //  Changes frog's direction to the opposite that it's currently facing 
     void flip() 
     {
         transform.localScale = new Vector2(-transform.localScale.x, transform.localScale.y);
+        AudioMgr.instance.PlaySound(sounds[0]);
     }
 
     public void ActivateFlyPowerUp()

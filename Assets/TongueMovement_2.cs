@@ -7,14 +7,15 @@ public class TongueMovement_2 : MonoBehaviour
     public float tongueLength = 3f;  // Maximum length the tongue can extend
     public float interactionDistance = 2f;  // Distance within which tongue can interact with objects
     public LayerMask interactableLayers;  // Layers that tongue can interact with
-    private Animator tongueAnimator;  // Reference to the Animator component
+    public Animator tongueAnimator;  // Reference to the Animator component
     public FrogMovement2 frogMovement; 
     private Vector2 tongueEnd;  // Calculated end point of the tongue
+    public AudioClip toungueSound; 
 
     void Start()
     {
         // Initialize the tongueAnimator reference
-        tongueAnimator = GetComponent<Animator>();  // Fetch the Animator component on this GameObject
+        // tongueAnimator = GetComponent<Animator>();  // Fetch the Animator component on this GameObject (for now we just set manually in editor)
         if (!tongueAnimator)  // Check if Animator component is present
         {
             Debug.LogError("No Animator component found on this GameObject!", this);  // Log error if Animator is missing
@@ -23,9 +24,11 @@ public class TongueMovement_2 : MonoBehaviour
 
     void Update()
     {
+        tongueAnimator.SetBool("isFiring", false);
         if (Input.GetKeyDown(KeyCode.T))  // Check for T key press (specific for second frog)
         {
             HandleTongueExtension();  // Handle the tongue extension logic
+            AudioMgr.instance.PlaySound(toungueSound); 
         }
         else if (Input.GetKeyUp(KeyCode.T))  // Check for T key release (specific for second frog)
         {
@@ -37,7 +40,7 @@ public class TongueMovement_2 : MonoBehaviour
     {
         if (tongueAnimator)  // Ensure Animator reference is not null
         {
-            tongueAnimator.SetTrigger("ExtendTongue");  // Play tongue extension animation
+            tongueAnimator.SetBool("isFiring", true);  // Play tongue extension animation
         }
 
         tongueEnd = transform.position + transform.right * tongueLength;  // Calculate tongue's end position
