@@ -297,12 +297,12 @@ GameObject:
   - component: {fileID: 161898496}
   - component: {fileID: 161898498}
   - component: {fileID: 161898497}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &161898496
 Transform:
@@ -427,12 +427,12 @@ GameObject:
   - component: {fileID: 194227235}
   - component: {fileID: 194227237}
   - component: {fileID: 194227236}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &194227235
 Transform:
@@ -1300,12 +1300,12 @@ GameObject:
   - component: {fileID: 438324679}
   - component: {fileID: 438324681}
   - component: {fileID: 438324680}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &438324679
 Transform:
@@ -12126,12 +12126,12 @@ GameObject:
   - component: {fileID: 1307803076}
   - component: {fileID: 1307803078}
   - component: {fileID: 1307803077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1307803076
 Transform:
@@ -12539,12 +12539,12 @@ GameObject:
   - component: {fileID: 1530708511}
   - component: {fileID: 1530708513}
   - component: {fileID: 1530708512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1530708511
 Transform:
@@ -12758,12 +12758,12 @@ GameObject:
   - component: {fileID: 1634802729}
   - component: {fileID: 1634802731}
   - component: {fileID: 1634802730}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1634802729
 Transform:
@@ -12986,12 +12986,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1758846566}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LevelColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1758846566
 Transform:
@@ -13026,12 +13026,12 @@ GameObject:
   - component: {fileID: 1893886546}
   - component: {fileID: 1893886548}
   - component: {fileID: 1893886547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1893886546
 Transform:
