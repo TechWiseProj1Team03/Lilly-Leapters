@@ -1431,6 +1431,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FrogOne
       objectReference: {fileID: 0}
+    - target: {fileID: 1872266602053038846, guid: 997067916984ce743987c7ff58be17aa, type: 3}
+      propertyPath: raycastDistance
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 4845966327049388330, guid: 997067916984ce743987c7ff58be17aa, type: 3}
       propertyPath: m_RootOrder
       value: 1
